@@ -3,11 +3,53 @@ body {
 }
 
 .home {
-	background-color: rgba(231, 76, 60, 1)
+	background-color: rgba(231, 76, 60, 1);
+	height: 500px;
 }
 
-.headline {
-	h1 {
-		margin: 0;
+.main-text{
+	position: relative;
+	width: 400px;
+	float: left;
+	top: 27%;
+	.headline {
+		p {
+			color: white;
+			font-weight: bold;
+			font-size: 44px;
+			font-family: 'Roboto', sans-serif;
+			margin: 0px 0px 35px 0px;
+		}
+	}
+	.headline-info-temp {
+		p {
+		color: white;
+		// font-weight: regular;
+		font-size: 12px;
+		font-family: 'Roboto', sans-serif;
+		// font-weight: 400;
+		}
 	}
 }
+
+.logo-container {
+	position: relative;
+	top: 7%;
+	float: left;
+	margin: 0 0 0 4%;
+	.logo {
+		height: 60px;
+	}
+}
+
+.iphone-container {
+	// height: 83%;
+	position: relative;
+	float: right;
+	margin: 0 20% 0 0;
+	top: 18%;
+	.iphone {
+		height: 500px;
+	}
+}
+
