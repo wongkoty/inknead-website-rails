@@ -1,3 +1,6 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 body {
 	margin: 0;
 }
@@ -9,10 +12,11 @@ body {
 
 .main-text{
 	position: relative;
-	width: 400px;
+
 	float: left;
 	top: 27%;
 	.headline {
+		width: 400px;
 		p {
 			color: white;
 			font-weight: bold;
@@ -22,11 +26,12 @@ body {
 		}
 	}
 	.headline-info-temp {
+		width: 300px;
 		p {
 		color: white;
 		// font-weight: regular;
 		font-size: 12px;
-		font-family: 'Roboto', sans-serif;
+		font-family: 'Roboto-regular', sans-serif;
 		// font-weight: 400;
 		}
 	}
@@ -51,5 +56,36 @@ body {
 	.iphone {
 		height: 500px;
 	}
+}
+
+.email-input::-webkit-input-placeholder {
+  color: white;
+	font-size: 16px;
+	font-family: 'Roboto-Regular', sans-serif;
+}
+
+.email-input {
+	background-color: rgba(210, 114, 101, 1);
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	padding: 10px 30px;
+	border: none;
+	font-size: 16px;
+}
+
+.email-submit {
+	background-color: white;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	border: none;
+	display: inline-block;
+	cursor: pointer;
+	color: rgba(210, 114, 101, 1);
+	font-family: 'Roboto-Regular', sans-serif;
+	font-size: 16px;
+	padding: 10px 50px;
+	text-decoration: none;
 }
 
