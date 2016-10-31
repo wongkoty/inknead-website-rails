@@ -7,7 +7,7 @@ body {
 
 .home {
 	background-color: rgba(231, 76, 60, 1);
-	height: 500px;
+	height: 550px;
 }
 
 .main-text{
@@ -47,14 +47,31 @@ body {
 	}
 }
 
+.social-container {
+	position: relative;
+	top: 7%;
+	float: right;
+	margin: 0 8% 0 0;
+	height: 50px;
+	.social-icons {
+		margin: 0 0 0 30px;
+		height: 50%;
+	}
+	.share-icon {
+		height: 100%;
+	}
+}
+
+
 .iphone-container {
 	// height: 83%;
 	position: relative;
 	float: right;
 	margin: 0 20% 0 0;
-	top: 18%;
+	top: 12%;
+	width: 275px;
 	.iphone {
-		height: 500px;
+		// height: 500px;
 	}
 }
 
@@ -72,20 +89,49 @@ body {
 	padding: 10px 30px;
 	border: none;
 	font-size: 16px;
+	color: white;
 }
 
-.email-submit {
+.white-button {
 	background-color: white;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	border-radius: 4px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
 	border: none;
 	display: inline-block;
 	cursor: pointer;
 	color: rgba(210, 114, 101, 1);
-	font-family: 'Roboto-Regular', sans-serif;
+	font-family: 'Roboto-Medium', sans-serif;
 	font-size: 16px;
 	padding: 10px 50px;
 	text-decoration: none;
 }
 
+.learn-demo-container {
+	margin-top: 60px;
+	.learn-button {
+		padding: 10px 40px;
+	}
+	.demo-button {
+		background-color: rgba(231, 76, 60, 1);
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+		border: 3px solid white;
+		display: inline-block;
+		cursor: pointer;
+		color: white;
+		font-family: 'Roboto-Medium', sans-serif;
+		font-size: 16px;
+		padding: 7px 56px;
+		text-decoration: none;
+		margin-left: 35px;
+	}
+}
+
+
+// bootstrap mods
+.container-fluid {
+	padding-left: 0;
+	padding-right: 0;
+}
