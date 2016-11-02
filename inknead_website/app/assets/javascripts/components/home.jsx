@@ -24,7 +24,7 @@ var Home = React.createClass({
 							Verstibulum rutrum urna felis.</p>
 						</div>
 						<div className='email-form-container'>
-							<form>
+							<form action='/landing_page' method="POST">
 								<input type='text' name='email' placeholder='Your E-mail' className='email-input'/>
 								<input type='submit' className='white-button' />
 							</form>
