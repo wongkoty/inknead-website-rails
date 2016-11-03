@@ -41,6 +41,7 @@ var Home = React.createClass({
 						<img src='assets/iphone_big.png' className='iphone img-responsive'/>
 					</div>
 				</div>
+{this.props.name}
 			</div>
 		)
 	}

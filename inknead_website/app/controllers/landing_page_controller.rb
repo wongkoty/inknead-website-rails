@@ -22,13 +22,20 @@ class LandingPageController < ApplicationController
     # puts meow 
 
 	begin
-  	 gb.lists.subscribe({:id => ENV["MAILCHIMP_LIST_ID"], 
-    										 :email => {:email => params[:email]}, :double_optin => false}) 
+  	gb.lists.subscribe({:id => ENV["MAILCHIMP_LIST_ID"], 
+    										:email => {:email => params[:email]}, :double_optin => false}) 
 	rescue Gibbon::MailChimpError => e
   	puts "Houston, we have a problem: #{e.message}"
 	end
 
-  	redirect_to root_path, :flash => { :error => "There are errors"}
+		# puts "#{e.message}"
+
+		if e.blank?
+			redirect_to root_path, :flash => { :success => "Success!"}
+		else
+  		redirect_to root_path, :flash => { :error => "#{e.message}"}
+  	end
+
   end
 
 end

@@ -1,1 +1,5 @@
-<%= react_component('Home', {prerender: true}) %>
+<% if flash[:error] %>
+	<%= react_component('Home', {name: flash[:error]}, {prerender: false}) %>
+<% else %>
+ 	<%= react_component('Home', {name: flash[:success]}, {prerender: false}) %>
+<% end %>
