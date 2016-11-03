@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root 'landing_page#index'
 
   post 'landing_page' => 'landing_page#new'
+  match '/500', to: 'landing_page#index', via: :all
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

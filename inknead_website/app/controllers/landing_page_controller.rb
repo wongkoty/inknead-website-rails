@@ -5,13 +5,30 @@ class LandingPageController < ApplicationController
   end
 
   def new
-  	puts 'in the new'
-  	puts params[:email]
+  	# puts 'in the new'
+  	# puts params[:email]
   	# puts ENV["MAILCHIMP_LIST_ID"]
   	gb = Gibbon::API.new
-    gb.lists.subscribe({:id => ENV["MAILCHIMP_LIST_ID"], 
-    										:email => {:email => params[:email]}, :double_optin => false}) 
-  	redirect_to root_path
+    # gb.lists.subscribe({:id => ENV["MAILCHIMP_LIST_ID"], 
+    # 										:email => {:email => params[:email]}, :double_optin => false}) 
+    # # if error
+    # 	redirect_to root_path
+    # end
+    # error = Gibbon::MailChimpError
+    # puts error.message
+
+    # meow = gb.lists.subscribe({:id => ENV["MAILCHIMP_LIST_ID"], 
+    # 										:email => {:email => params[:email]}, :double_optin => false})
+    # puts meow 
+
+	begin
+  	 gb.lists.subscribe({:id => ENV["MAILCHIMP_LIST_ID"], 
+    										 :email => {:email => params[:email]}, :double_optin => false}) 
+	rescue Gibbon::MailChimpError => e
+  	puts "Houston, we have a problem: #{e.message}"
+	end
+
+  	redirect_to root_path, :flash => { :error => "There are errors"}
   end
 
 end
