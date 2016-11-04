@@ -41,7 +41,8 @@ body {
 	position: relative;
 	top: 7%;
 	float: left;
-	margin: 0 0 0 4%;
+	left: 3%;
+	// margin: 0 0 0 4%;
 	.logo {
 		height: 60px;
 	}
@@ -51,8 +52,9 @@ body {
 	position: relative;
 	top: 7%;
 	float: right;
-	margin: 0 8% 0 0;
+	// margin: 0 8% 0 0;
 	height: 50px;
+	right: 3%;
 	.social-icons {
 		margin: 0 0 0 30px;
 		height: 50%;
