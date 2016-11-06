@@ -1,5 +1,6 @@
 class LandingPageController < ApplicationController
 	skip_before_action :verify_authenticity_token
+	
   def index
 
   end
@@ -30,11 +31,11 @@ class LandingPageController < ApplicationController
 
 		# puts "#{e.message}"
 
-		if e.blank?
-			redirect_to root_path, :flash => { :success => "Success!"}
-		else
-  		redirect_to root_path, :flash => { :error => "#{e.message}"}
-  	end
+	if e.blank?
+		redirect_to root_path, :flash => { :success => "Success!"}
+	else
+		redirect_to root_path, :flash => { :error => "#{e.message}"}
+	end
 
   end
 

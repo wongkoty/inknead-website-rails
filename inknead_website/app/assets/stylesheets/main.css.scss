@@ -12,7 +12,6 @@ body {
 
 .main-text{
 	position: relative;
-
 	float: left;
 	top: 27%;
 	.headline {
@@ -36,7 +35,6 @@ body {
 		}
 	}
 }
-
 .logo-container {
 	position: relative;
 	top: 7%;
@@ -47,7 +45,6 @@ body {
 		height: 60px;
 	}
 }
-
 .social-container {
 	position: relative;
 	top: 7%;
@@ -72,7 +69,10 @@ body {
 	margin: 0 20% 0 0;
 	top: 12%;
 	width: 275px;
+	height: 78.9%;
+	overflow: hidden;
 	.iphone {
+		// overflow: hidden;
 		// height: 500px;
 	}
 }
@@ -129,6 +129,16 @@ body {
 		text-decoration: none;
 		margin-left: 35px;
 	}
+}
+
+.platform {
+	height: 550px;
+}
+.platform-text {
+	margin-top: 70px;
+}
+.platform-info {
+	width: 450px;
 }
 
 // mobile format
@@ -196,6 +206,7 @@ body {
 		margin: 0 18% 0 0;
 		top: 15%;
 		width: 62%;
+		overflow: hidden;
 		.iphone {
 			// height: 500px;
 		}

@@ -42,6 +42,7 @@ var Home = React.createClass({
 					</div>
 				</div>
 {this.props.name}
+			<Platform/>
 			</div>
 		)
 	}
